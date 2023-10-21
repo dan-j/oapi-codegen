@@ -656,7 +656,7 @@ func GenFieldsFromProperties(props []Property) []string {
 			if i != 0 {
 				field += "\n"
 			}
-			field += fmt.Sprintf("%s\n", StringWithTypeNameToGoComment(p.Description, p.GoFieldName()))
+			field += fmt.Sprintf("%s\n", StringToGoComment(p.Description))
 		}
 
 		if p.Deprecated {
