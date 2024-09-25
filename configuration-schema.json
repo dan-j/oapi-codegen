@@ -214,6 +214,10 @@
           "required": [
             "path"
           ]
+        },
+        "disable-godoc-typename-prefix": {
+          "type": "boolean",
+          "description": "DisableGodocTypenamePrefix disables the prefixing of type names in godoc comments"
         }
       }
     },

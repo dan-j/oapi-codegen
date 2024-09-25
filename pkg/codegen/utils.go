@@ -861,6 +861,10 @@ func StringToGoComment(in string) string {
 // valid Go-Comment, including the name of the type being referenced. Each line
 // is prefixed as a comment.
 func StringWithTypeNameToGoComment(in, typeName string) string {
+	if globalState.options.OutputOptions.DisableGodocTypenamePrefix {
+		return stringToGoCommentWithPrefix(in, "")
+	}
+
 	return stringToGoCommentWithPrefix(in, typeName)
 }
 
